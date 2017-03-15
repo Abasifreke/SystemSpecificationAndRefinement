@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ctx0"/>
+<org.eventb.core.variable name="g" org.eventb.core.identifier="g"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="n ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="b ≔ 1" org.eventb.core.label="act3"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="data ≔ −1" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="final" uk.ac.ncl.eventb.mod.core.entryPoint="false">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="final"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="ran(g) = ran(f)" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="n = N"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="∀ i,j · i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ∧ i ≤ j&#10;    ⇒  g(i) ≤ g(j)" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="change_g" uk.ac.ncl.eventb.mod.core.entryPoint="false">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_g"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="g ≔ swap(g↦a↦b)" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="internal1" org.eventb.core.label="grd4" org.eventb.core.predicate="a ∈ 0‥n"/>
+<org.eventb.core.guard name="internal2" org.eventb.core.label="grd1" org.eventb.core.predicate="b ∈ 1‥N"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="a ∈ 0‥n"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="b ∈ n+1‥N"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="b ≔ b + 1" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="internal4" org.eventb.core.label="grd5" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.witness name="internal5" org.eventb.core.label="wit1" org.eventb.core.predicate="a = i"/>
+<org.eventb.core.witness name="internal6" org.eventb.core.label="wit2" org.eventb.core.predicate="b = j"/>
+<org.eventb.core.parameter name="internal7" org.eventb.core.identifier="i"/>
+<org.eventb.core.parameter name="internal8" org.eventb.core.identifier="j"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="var1" org.eventb.core.identifier="n"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv1" org.eventb.core.predicate="∀ i,j · i ∈ 1‥n ∧ j ∈ 1‥n&#10;      ∧ i ≤ j&#10;    ⇒  g(i) ≤ g(j)"/>
+<org.eventb.core.invariant name="inv4" org.eventb.core.label="inv2" org.eventb.core.predicate="n ∈ 0‥N"/>
+<org.eventb.core.invariant name="inv2" org.eventb.core.label="inv3" org.eventb.core.predicate="∀ i,j · i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ∧ i ≤ n ∧ n+1 ≤ j&#10;    ⇒  g(i) ≤ g(j)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv3" org.eventb.core.label="inv4" org.eventb.core.predicate="∀ i,j · i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ∧ i ≤ n ∧ i ≤ j&#10;    ⇒  g(i) ≤ g(j)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="var6" org.eventb.core.label="inv5" org.eventb.core.predicate="a ∈ 0‥N"/>
+<org.eventb.core.variant name="var2" org.eventb.core.expression="N − n"/>
+<org.eventb.core.event name="var3" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="inc_n" uk.ac.ncl.eventb.mod.core.entryPoint="false">
+<org.eventb.core.action name="'" org.eventb.core.assignment="n ≔ n + 1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="¬ n = N"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="∀ i · i ∈ n+1‥N ⇒ g(n+1) ≤ g(i)"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="var4" org.eventb.core.identifier="a"/>
+<org.eventb.core.variable name="var5" org.eventb.core.identifier="b"/>
+<org.eventb.core.invariant name="var7" org.eventb.core.label="inv6" org.eventb.core.predicate="b ∈ 0‥N"/>
+<org.eventb.core.invariant name="var8" org.eventb.core.label="inv7" org.eventb.core.predicate="a ≤ b"/>
+<org.eventb.core.variable name="var9" org.eventb.core.identifier="data"/>
+<org.eventb.core.invariant name="var:" org.eventb.core.label="inv8" org.eventb.core.predicate="data ∈ ran(g)"/>
+<org.eventb.core.invariant name="var;" org.eventb.core.label="inv9" org.eventb.core.predicate="i ∈ 0‥N"/>
+<org.eventb.core.invariant name="var=" org.eventb.core.label="inv10" org.eventb.core.predicate="j ∈ 1‥N"/>
+</org.eventb.core.machineFile>

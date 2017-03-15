@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="O" org.eventb.core.predicate="0≤N" org.eventb.core.source="/Cubes/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="f" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="o" org.eventb.core.predicate="f∈ℕ ⇸ ℕ" org.eventb.core.source="/Cubes/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="p" org.eventb.core.predicate="0≤n" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="q" org.eventb.core.predicate="f∈0 ‥ n − 1 → ℕ" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="r" org.eventb.core.predicate="⊤" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx7">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="a'∈ℕ" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#.|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a'∈ℕ" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#*"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx7">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="n'∈ℕ" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#*|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℕ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#.|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#.|org.eventb.core.action#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTctx7" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="n'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="f'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctx7" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTctx7" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="change_f/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx8">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="a'∈ℕ" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.action#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a'∈ℕ" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#change_f\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="change_f/act3/FIS" org.eventb.core.accurate="false" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx8">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="n'∈ℕ" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.action#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℕ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="change_f/act1/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPctx8"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f{n ↦ a}=f{n ↦ n∗n∗n}" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#change_f\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTctx8" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="n'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="f'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctx8" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTctx8" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctx9" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="n=N" org.eventb.core.source="/Cubes/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#,|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Cubes/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈ℕ" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="⊤" org.eventb.core.source="/Cubes/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#3"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

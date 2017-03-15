@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m2"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="ctx0"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="f"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="n"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="a"/>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="b :∈ ℕ" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_f">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_f"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="b :∈ ℕ" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="terminate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="terminate"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv1" org.eventb.core.predicate="b ∈ ℕ "/>
+<org.eventb.core.variable name="6" org.eventb.core.comment="the purpose of 'b' is so that we don't have to compute&#10;multiplications when assigning to 'a'. In the&#10;assignment to 'b', we can use multiplications.&#10;we will remove them in later refinements." org.eventb.core.identifier="b"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv2" org.eventb.core.predicate="⊤"/>
+</org.eventb.core.machineFile>

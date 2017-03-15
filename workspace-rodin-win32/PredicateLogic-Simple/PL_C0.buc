@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1363018255646" org.eventb.texttools.text_representation="context C0&#10;constants P // x:P means x has poperty P&#10;          Q // x:Q means x has property Q&#10;&#10;&#10;sets U // universal set&#10;&#10;&#10;axioms&#10;  @axm1 P ⊆ U&#10;  @axm2 Q ⊆ U&#10;  theorem @thm3 (∃y·y∈U) // Carrier sets are not empty&#10;  theorem @thm4 (∀x·x∈P∧x∈Q)⇔(∀x·x∈P)∧(∀x·x∈Q)&#10;  theorem @thm5 (∀x·x∈P ∨ x∈Q)⇒(∃x·x∈P ∨ x∈Q)&#10;  theorem @bad (∃y·y∈P) // P might be empty&#10;&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_QQzHcYpmEeKY1sOqmw4UqQ" org.eventb.core.comment="universal set" org.eventb.core.identifier="U"/>
+<org.eventb.core.constant name="_QQzugIpmEeKY1sOqmw4UqQ" org.eventb.core.comment="x:P means x has poperty P" org.eventb.core.identifier="P"/>
+<org.eventb.core.constant name="_QQzugYpmEeKY1sOqmw4UqQ" org.eventb.core.comment="x:Q means x has property Q" org.eventb.core.identifier="Q"/>
+<org.eventb.core.axiom name="_QQ0VkIpmEeKY1sOqmw4UqQ" org.eventb.core.label="axm1" org.eventb.core.predicate="P ⊆ U"/>
+<org.eventb.core.axiom name="_QQ08oIpmEeKY1sOqmw4UqQ" org.eventb.core.label="axm2" org.eventb.core.predicate="Q ⊆ U"/>
+<org.eventb.core.axiom name="_QQ08oYpmEeKY1sOqmw4UqQ" org.eventb.core.comment="Carrier sets are not empty" org.eventb.core.label="thm3" org.eventb.core.predicate="(∃y·y∈U)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_QQ1jsIpmEeKY1sOqmw4UqQ" org.eventb.core.label="thm4" org.eventb.core.predicate="(∀x·x∈P∧x∈Q)⇔(∀x·x∈P)∧(∀x·x∈Q)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_QQ1jsYpmEeKY1sOqmw4UqQ" org.eventb.core.label="thm5" org.eventb.core.predicate="(∀x·x∈P ∨ x∈Q)⇒(∃x·x∈P ∨ x∈Q)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_QQ2KwIpmEeKY1sOqmw4UqQ" org.eventb.core.comment="P might be empty" org.eventb.core.label="bad" org.eventb.core.predicate="(∃y·y∈P)" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

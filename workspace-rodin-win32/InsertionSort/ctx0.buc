@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.constant name="'" org.eventb.core.comment="Number of elements in array f" org.eventb.core.identifier="N"/>
+<org.eventb.core.constant name="+" org.eventb.core.identifier="swap"/>
+<org.eventb.core.constant name="(" org.eventb.core.comment="Array to sort" org.eventb.core.identifier="f"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="0 ≤ N"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm2" org.eventb.core.predicate="f ∈ 1‥N ↣ ℤ"/>
+<org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="swap ∈ (1‥N ↣ ℤ) × (1‥N) × (1‥N) → (1‥N ↔ ℤ)"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm4" org.eventb.core.predicate="∀ g,i,j · g ∈ 1‥N ↣ ℤ ∧ i ∈ 1‥N ∧ j ∈ 1‥N&#10;       ⇒ swap(g↦i↦j) = g  {i↦g(j),j↦g(i)}"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm5" org.eventb.core.predicate="∀ g,i,j · g ∈ 1‥N ↣ ℤ ∧ i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ⇒  swap(g↦i↦j) = swap(g↦j↦i)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm6" org.eventb.core.predicate="∀ g,i,j · g ∈ 1‥N ↣ ℤ ∧ i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ⇒  swap(g↦i↦j)(i) = g(j)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm7" org.eventb.core.predicate="∀ g,i,j · g ∈ 1‥N ↣ ℤ ∧ i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ⇒  swap(g↦i↦j)(j) = g(i)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm8" org.eventb.core.predicate="∀ g,i,j,k · g ∈ 1‥N ↣ ℤ &#10;          ∧ i ∈ 1‥N ∧ j ∈ 1‥N ∧ k ∈ 1‥N&#10;          ∧ ¬ k=i ∧ ¬ k=j&#10;        ⇒  swap(g↦i↦j)(k) = g(k)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm9" org.eventb.core.predicate="∀ g,i,j · g ∈ 1‥N ↣ ℤ ∧ i ∈ 1‥N ∧ j ∈ 1‥N&#10;      ⇒  ran(swap(g↦i↦j)) = ran(g)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm10" org.eventb.core.predicate="swap ∈ (1‥N ↣ ℤ) × (1‥N) × (1‥N) → (1‥N ↣ ℤ)" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>
